@@ -3440,151 +3440,98 @@ input, select, textarea {
 	}
 
 /* Header */
-
-	#header {
-		-moz-transition: background-color 0.2s ease;
-		-webkit-transition: background-color 0.2s ease;
-		-ms-transition: background-color 0.2s ease;
-		transition: background-color 0.2s ease;
-		background: #2e3842;
-		height: 3em;
-		left: 0;
-		line-height: 3em;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 10000;
-	}
-
-		#header h1 {
-			-moz-transition: opacity 0.2s ease;
-			-webkit-transition: opacity 0.2s ease;
-			-ms-transition: opacity 0.2s ease;
-			transition: opacity 0.2s ease;
-			height: inherit;
-			left: 1.25em;
-			line-height: inherit;
-			position: absolute;
-			top: 0;
-		}
-
-			/* Increase header height to fit subtitle */
 #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.5em;
+  line-height: 1.8em;
+  background: #2e3842;
+  z-index: 10000;
+  transition: background-color 0.2s ease;
   border: 0;
-				display: block;
-	height: 5.5em;
-  line-height: 1.8em; /* Better spacing inside */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25em;
 }
 
-/* Make subtitle appear right under the name inside header */
+#header h1 {
+  position: relative;
+  margin: 0;
+  font-size: 1em;
+}
+
 #header .subtitle {
   display: block;
-  margin-top: 0.1em;
   font-size: 0.65em;
   font-weight: 300;
   letter-spacing: 0.2em;
   color: #d4d4d4;
   text-transform: uppercase;
+  margin-top: 0.1em;
 }
 
-				@media screen and (max-width: 736px) {
+/* Profile image in header */
+#header .header-profile-image {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
 
-					#header h1 a {
-						font-size: 0.8em;
-					}
+/* Navigation */
+#header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
-				}
+#header nav ul li a {
+  display: block;
+  color: #fff;
+  font-size: 0.8em;
+  letter-spacing: 0.225em;
+  text-transform: uppercase;
+  padding: 0 1.5em;
+}
 
-		#header nav {
-			height: inherit;
-			line-height: inherit;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
+#header.alt {
+  background: transparent;
+}
 
-			#header nav > ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				white-space: nowrap;
-			}
+#header.alt h1 {
+  pointer-events: none;
+  opacity: 0;
+}
 
-				#header nav > ul > li {
-					display: inline-block;
-					padding: 0;
-				}
-
-					#header nav > ul > li > a {
-						border: 0;
-						color: #fff;
-						display: block;
-						font-size: 0.8em;
-						letter-spacing: 0.225em;
-						padding: 0 1.5em;
-						text-transform: uppercase;
-					}
-
-						#header nav > ul > li > a.menuToggle {
-							outline: 0;
-							position: relative;
-						}
-
-							#header nav > ul > li > a.menuToggle:after {
-								background-image: url("images/bars.svg");
-								background-position: right center;
-								background-repeat: no-repeat;
-								content: '';
-								display: inline-block;
-								height: 3.75em;
-								vertical-align: top;
-								width: 2em;
-							}
-
-							@media screen and (max-width: 736px) {
-
-								#header nav > ul > li > a.menuToggle {
-									padding: 0 1.5em;
-								}
-
-									#header nav > ul > li > a.menuToggle span {
-										display: none;
-									}
-
-							}
-
-						@media screen and (max-width: 736px) {
-
-							#header nav > ul > li > a {
-								padding: 0 0 0 1.5em;
-							}
-
-						}
-
-					#header nav > ul > li:first-child {
-						margin-left: 0;
-					}
-
-		#header.alt {
-			background: transparent;
-		}
-
-			#header.alt h1 {
-				pointer-events: none;
-				opacity: 0;
-			}
-
-/* Banner */
-
-/* Profile image in banner */
+/* Banner profile image */
 #banner .profile-image {
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
-	border-radius: 50%;
-	border: 3px solid #ffffff;
-	margin: 0 auto 1em auto;
-	display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  display: block;
+  margin: 0 auto 1em auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+  #header h1 a {
+    font-size: 0.8em;
+  }
+
+  #header nav ul li a {
+    padding-left: 1.5em;
+  }
+
+  #header nav ul li a.menuToggle span {
+    display: none;
+  }
 }
 
 	#banner {
@@ -4021,5 +3968,6 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
