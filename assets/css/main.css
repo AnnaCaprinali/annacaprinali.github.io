@@ -2817,10 +2817,10 @@ input, select, textarea {
 			padding: 0;
 		}
 
-		.wrapper.style1 {
-			background-color: #21b2a6;
-			color: #c8ece9;
-		}
+.wrapper.style1 {
+    background-color: #FFD699;  
+    color: #663300;             
+}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
 				color: #ffffff;
@@ -3503,15 +3503,31 @@ input, select, textarea {
   margin-left: 1em; /* spacing from nav */
 }
 
-/* Banner profile image */
-#banner .profile-image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  display: block;
-  margin: 0 auto 1em auto;
+/* Banner inner container as flex */
+.banner-content {
+    display: flex;
+    align-items: center;   /* vertically center the content */
+    justify-content: space-between; /* text on left, image on right */
+    gap: 2rem; /* optional space between text and image */
+}
+
+/* Make profile image smaller and circular */
+.profile-image {
+    width: 150px; /* adjust as needed */
+    height: 150px;
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover;  /* ensures image scales nicely */
+}
+
+/* Optional: responsive for small screens */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-image {
+        margin-top: 1rem;
+    }
 }
 
 /* Responsive */
@@ -3975,6 +3991,7 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
