@@ -3576,6 +3576,17 @@ input, select, textarea {
 
 /* Banner */
 
+/* Profile image in banner */
+#banner .profile-image {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #ffffff;
+	margin: 0 auto 1em auto;
+	display: block;
+}
+
 	#banner {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -4010,4 +4021,5 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
