@@ -3440,31 +3440,34 @@ input, select, textarea {
 	}
 
 /* Header */
+/* Header */
 #header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 5.5em;
-  line-height: 1.8em;
   background: #2e3842;
   z-index: 10000;
-  transition: background-color 0.2s ease;
-  border: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1.25em;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+/* Site title and subtitle */
+#header .title-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #header h1 {
-  position: relative;
   margin: 0;
-  font-size: 1em;
 }
 
 #header .subtitle {
-  display: block;
   font-size: 0.65em;
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -3473,21 +3476,12 @@ input, select, textarea {
   margin-top: 0.1em;
 }
 
-/* Profile image in header */
-#header .header-profile-image {
-  width: 85px;
-  height: 85px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
 /* Navigation */
 #header nav ul {
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 #header nav ul li a {
@@ -3496,16 +3490,17 @@ input, select, textarea {
   font-size: 0.8em;
   letter-spacing: 0.225em;
   text-transform: uppercase;
-  padding: 0 1.5em;
+  padding: 0 1em;
 }
 
-#header.alt {
-  background: transparent;
-}
-
-#header.alt h1 {
-  pointer-events: none;
-  opacity: 0;
+/* Profile image on the right */
+#header .header-profile-image {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: 1em; /* spacing from nav */
 }
 
 /* Banner profile image */
@@ -3518,6 +3513,18 @@ input, select, textarea {
   display: block;
   margin: 0 auto 1em auto;
 }
+
+/* Responsive */
+@media screen and (max-width: 736px) {
+  #header h1 a {
+    font-size: 0.8em;
+  }
+
+  #header nav ul li a {
+    padding-left: 0.8em;
+  }
+}
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 736px) {
@@ -3968,6 +3975,7 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
