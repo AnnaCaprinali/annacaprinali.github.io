@@ -3440,7 +3440,6 @@ input, select, textarea {
 	}
 
 /* Header */
-/* Header */
 #header {
   position: fixed;
   top: 0;
@@ -3493,41 +3492,39 @@ input, select, textarea {
   padding: 0 1em;
 }
 
-/* Profile image on the right */
+/* Profile image on the right (in header) */
 #header .header-profile-image {
   width: 85px;
   height: 85px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #fff;
-  margin-left: 1em; /* spacing from nav */
+  margin-left: 1em;
 }
 
-/* Banner inner container as flex */
-.banner-content {
-    display: flex;
-    align-items: center;   /* vertically center the content */
-    justify-content: space-between; /* text on left, image on right */
-    gap: 2rem; /* optional space between text and image */
+/* ✅ Banner content centered again */
+#banner .inner {
+  text-align: center;
 }
 
-/* Make profile image smaller and circular */
+/* ✅ Profile image back to center under name */
 .profile-image {
-    width: 150px; /* adjust as needed */
-    height: 150px;
-    border-radius: 50%; /* makes it circular */
-    object-fit: cover;  /* ensures image scales nicely */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0.75rem auto;
 }
 
-/* Optional: responsive for small screens */
+/* Responsive: keeps image centered on mobile too */
 @media (max-width: 768px) {
-    .banner-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .profile-image {
-        margin-top: 1rem;
-    }
+  #banner .inner {
+    text-align: center;
+  }
+  .profile-image {
+    margin-top: 1rem;
+  }
 }
 
 /* Responsive */
@@ -3991,6 +3988,7 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
