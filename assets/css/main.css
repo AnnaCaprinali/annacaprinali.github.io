@@ -3863,41 +3863,108 @@ input, select, textarea {
 		background-attachment: scroll;
 	}
 
-<!-- Footer -->
-<footer id="footer">
-    <ul class="icons">
-        <!-- LinkedIn -->
-        <li>
-            <a href="https://www.linkedin.com/in/anna-caprinali" class="icon fa-brands fa-linkedin" target="_blank">
-                <span class="label">LinkedIn</span>
-            </a>
-        </li>
+/* Footer base */
+#footer {
+    padding: 6em 0 4em 0;
+    background-color: #1d242a;
+    text-align: center;
+}
 
-        <!-- Bluesky (custom SVG) -->
-        <li>
-            <a href="https://bsky.app/profile/annacaprinali.bsky.social" class="icon" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10
-                             10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8
-                             8-8 8 3.582 8 8-3.582 8-8 8zm-1-13h2v6h-2V7zm0 8h2v2h-2v-2z"
-                          fill="currentColor"/>
-                </svg>
-                <span class="label">Bluesky</span>
-            </a>
-        </li>
+/* Icons */
+#footer .icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25em;
+}
 
-        <!-- Email -->
-        <li>
-            <a href="mailto:anna.caprinali@unitn.it" class="icon fa-solid fa-envelope">
-                <span class="label">Email</span>
-            </a>
-        </li>
-    </ul>
+#footer .icons li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
 
-    <ul class="copyright">
-        <li>&copy; 2025 Anna Caprinali</li>
-    </ul>
-</footer>
+/* Links */
+#footer .icons a {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover */
+#footer .icons a:hover {
+    color: #fff;
+}
+
+/* Font Awesome */
+#footer .icons a.fa-brands {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+
+#footer .icons a.fa-solid {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+/* Bluesky SVG sizing */
+#footer .icons a svg {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+    margin-right: 0.25em;
+    fill: currentColor; /* match link color */
+}
+
+/* Footer copyright */
+#footer .copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8em;
+    letter-spacing: 0.225em;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+    margin-top: 2em;
+}
+
+#footer .copyright li {
+    border-left: solid 1px rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    line-height: 1em;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+#footer .copyright li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+    #footer .copyright li {
+        border: 0;
+        display: block;
+        line-height: 1.65em;
+        margin: 0;
+        padding: 0.5em 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #footer {
+        padding: 4em 3em 2em 3em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #footer {
+        padding: 3em 2em 1em 2em;
+    }
+}
 
 
 /* Landing */
@@ -3936,6 +4003,7 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
