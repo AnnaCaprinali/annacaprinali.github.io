@@ -1797,13 +1797,17 @@ input, select, textarea {
 			top: 0;
 		}
 
-		@media screen and (max-width: 736px) {
+/* Fix <br> on mobile */
+@media screen and (max-width: 736px) {
+  br {
+    display: inline !important;
+  }
+}
 
-			header.major {
-				margin: 0 0 2em 0;
-			}
-
-		}
+/* Ensure bold always works in header paragraphs */
+header.major p strong {
+  font-weight: 700;
+}
 
 	@media screen and (max-width: 980px) {
 
@@ -3966,6 +3970,7 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
