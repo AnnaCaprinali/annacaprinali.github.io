@@ -3420,7 +3420,6 @@ input, select, textarea {
 		-ms-transform: translateX(0);
 		transform: translateX(0);
 	}
-
 /* Header */
 #header {
   position: fixed;
@@ -3438,14 +3437,21 @@ input, select, textarea {
   transition: background-color 0.2s ease;
 }
 
-/* Site title and subtitle */
+/* Title container (clickable) */
 #header .title-container {
   display: flex;
   flex-direction: column;
+  text-decoration: none; /* remove underline */
+  color: #fff;
+}
+
+#header .title-container:hover {
+  color: #7fbfff; /* optional hover effect */
 }
 
 #header h1 {
   margin: 0;
+  font-size: 1.5em;
 }
 
 #header .subtitle {
@@ -3456,6 +3462,7 @@ input, select, textarea {
   text-transform: uppercase;
   margin-top: 0.1em;
 }
+
 
 
 /* Navigation */
@@ -4069,4 +4076,5 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
