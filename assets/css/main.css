@@ -3878,23 +3878,26 @@ input, select, textarea {
     margin-bottom: 1.5em;
 }
 
-/* Font Awesome icons */
-.footer-icons a.fa-brands,
-.footer-icons a.fa-solid {
-    font-size: 1.5em;
-    color: rgba(255, 255, 255, 0.7);
-    transition: color 0.3s, transform 0.2s;
-    text-decoration: none;
+/* Footer icon links */
+.footer-icons a {
     display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s;
 }
 
-/* Bluesky SVG */
-.footer-icons a.bluesky-icon svg {
+/* SVG inside the links */
+.footer-icons a svg {
     width: 1.5em;
     height: 1.5em;
     fill: rgba(255, 255, 255, 0.7);
-    transition: fill 0.3s, transform 0.2s;
     vertical-align: middle;
+    transition: fill 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+.footer-icons a:hover svg {
+    fill: #fff;  /* or your preferred hover color */
+    transform: scale(1.1);
 }
 
 /* Hover effects */
@@ -3972,6 +3975,7 @@ input, select, textarea {
   opacity: 0.75;     /* slightly lighter */
   margin: -0.5em 0 0.5em 0; /* tighter spacing */
 }
+
 
 
 
