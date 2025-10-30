@@ -3971,6 +3971,14 @@ header.major p strong {
 		background-color: #1d242a;
 	}
 
+/* Pronouns styling */
+.pronouns {
+  font-size: 0.75em; /* smaller text */
+  opacity: 0.75;     /* slightly lighter */
+  margin: -0.5em 0 0.5em 0; /* tighter spacing */
+}
+
+
 
 
 
