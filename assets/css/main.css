@@ -3539,7 +3539,7 @@ input, select, textarea {
   }
 
   #header nav ul li a.menuToggle span {
-    display: none;
+    display: block;
   }
 }
 
@@ -3975,6 +3975,7 @@ input, select, textarea {
   opacity: 0.75;     /* slightly lighter */
   margin: -0.5em 0 0.5em 0; /* tighter spacing */
 }
+
 
 
 
