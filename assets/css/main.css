@@ -3976,6 +3976,20 @@ input, select, textarea {
   margin: -0.5em 0 0.5em 0; /* tighter spacing */
 }
 
+#dissemination .image img {
+	max-width: 180px;
+	border-radius: 6px;
+}
+
+/* On small screens: stack image above text */
+@media screen and (max-width: 768px) {
+	#dissemination .image.left,
+	#dissemination .image.right {
+		float: none;
+		margin: 0 auto 1em auto;
+		text-align: center;
+	}
+}
 
 
 
