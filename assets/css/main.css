@@ -1804,11 +1804,6 @@ input, select, textarea {
   }
 }
 
-/* Ensure bold always works in header paragraphs */
-header.major p strong {
-  font-weight: 700;
-}
-
 	@media screen and (max-width: 980px) {
 
 		header br {
@@ -3977,6 +3972,7 @@ header.major p strong {
   opacity: 0.75;     /* slightly lighter */
   margin: -0.5em 0 0.5em 0; /* tighter spacing */
 }
+
 
 
 
