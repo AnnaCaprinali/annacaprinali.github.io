@@ -3341,8 +3341,8 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #e2891d;
-		color: #ffffff;
+		background: #e06d3c; /* softer reddish-orange */
+		color: #FFD699;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -3975,6 +3975,7 @@ input, select, textarea {
   opacity: 0.75;     /* slightly lighter */
   margin: -0.5em 0 0.5em 0; /* tighter spacing */
 }
+
 
 
 
