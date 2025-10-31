@@ -3977,39 +3977,48 @@ input, select, textarea {
   padding-right: 0;
 }
 
-/* Expanded grid layout */
-.contact-grid {
+.contact-column {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(350px, 1fr));
-  gap: 3em;
+  max-width: 600px;  /* optional: controls max width */
   margin: 0 auto;
+  padding: 3em 1em;
   text-align: center;
-  padding: 3em 4em;
 }
+
 
 /* Card containers */
 .contact-card {
   padding: 1.8em;
 }
 
-/* Icon row spacing */
-.icons-row {
+.icon-column {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 1.5em;
   margin-top: 1em;
 }
 
-/* Icon styling */
+.icon-label {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.85em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
 .social-icon {
   width: 48px;
   height: 48px;
-  padding: 10px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid #fff;
+  filter: brightness(0) invert(1); /* makes the SVG white on dark background */
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
 }
+
 
 /* White icons on purple */
 .wrapper.style3 .social-icon {
@@ -4054,6 +4063,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
