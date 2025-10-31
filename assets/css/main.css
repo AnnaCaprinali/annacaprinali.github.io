@@ -3969,7 +3969,22 @@ input, select, textarea {
   }
 }
 
-/* Full-width section */
+/* Full contact section */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3em 2em;
+}
+
+.contact-card {
+  padding: 1.8em;
+}
+
 .contact-row {
   width: 100%;
   max-width: 900px;   /* controls overall width */
@@ -3978,32 +3993,23 @@ input, select, textarea {
   text-align: center;
 }
 
-/* Card container */
-.contact-card {
-  padding: 1.8em;
-}
-
-/* Horizontal row of icons */
-.icon-row {
+.icons-row {
   display: flex;
-  justify-content: center;   /* centers row horizontally */
-  gap: 3em;                  /* space between icons */
+  justify-content: center;
+  gap: 2.5em;
   margin-top: 1.5em;
-  flex-wrap: wrap;            /* wrap on smaller screens */
+  flex-wrap: wrap; /* wraps on small screens */
 }
 
-/* Icons themselves */
 .social-icon {
   width: 48px;
   height: 48px;
   filter: brightness(0) invert(1); /* white icons */
   padding: 0;
-  border-radius: 0;
   background: none;
   border: none;
 }
 
-/* Label under icons */
 .icon-label {
   display: block;
   margin-top: 0.4em;
@@ -4014,11 +4020,11 @@ input, select, textarea {
   text-align: center;
 }
 
-/* Hover effect */
-.icon-row a:hover .social-icon {
+.icons-row a:hover .social-icon {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
+
 
 /* Grid container for profiles */
 .profiles-grid {
@@ -4057,6 +4063,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
