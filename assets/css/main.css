@@ -3969,43 +3969,53 @@ input, select, textarea {
   }
 }
 
-/* Grid layout */
+/* Full-width white + purple banner sections */
+#contact .wrapper {
+  width: 100%;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Expanded grid layout */
 .contact-grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em;
-  max-width: 900px;
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  gap: 3em;
   margin: 0 auto;
   text-align: center;
+  padding: 3em 4em;
 }
 
 /* Card containers */
 .contact-card {
-  padding: 1.5em;
+  padding: 1.8em;
 }
 
-/* Icon row */
+/* Icon row spacing */
 .icons-row {
   display: flex;
   justify-content: center;
-  gap: 1.2em;
-  margin-top: 0.8em;
+  gap: 1.5em;
+  margin-top: 1em;
 }
 
-/* Proper icon styling */
+/* Icon styling */
 .social-icon {
-  width: 40px;
-  height: 40px;
-  padding: 8px;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
   border-radius: 50%;
   background: #fff;
   border: 2px solid #fff;
 }
 
-/* Make icons invert to white on dark background */
+/* White icons on purple */
 .wrapper.style3 .social-icon {
   filter: invert(100%);
 }
+
 
 /* Grid container for profiles */
 .profiles-grid {
@@ -4044,6 +4054,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
