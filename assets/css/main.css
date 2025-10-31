@@ -3971,29 +3971,35 @@ input, select, textarea {
 
 
 /* Contacts */
-#contact {
-  text-align: center;
-  margin-top: 4em;
-}
-
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
-  margin-top: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
-.contact-card {
-  background: #ffffff;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+.project-card {
+  background: inherit; /* inherits style3 or style5 background */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
 }
 
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+.social-icons-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.icon-link img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.icon-link img:hover {
+  transform: scale(1.1);
 }
 
 /* Grid container for profiles */
@@ -4033,6 +4039,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
