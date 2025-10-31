@@ -3971,34 +3971,30 @@ input, select, textarea {
 
 /* Full contact section */
 
-/* Make wrapper full-width */
-.wrapper.full-width {
-  width: 100%;
-  max-width: none;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
-}
-
-/* Top row: 2-column grid */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em;
-  padding: 3em 2em;
+/* Center the heading of the card */
+.contact-card h3 {
   text-align: center;
+  margin-bottom: 1.5em;
 }
 
-/* Bottom row: horizontal icon layout */
+/* Horizontal row of icons, but each icon+label centered */
 .icons-row {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* centers the whole row */
   gap: 2.5em;
   margin-top: 1.5em;
   flex-wrap: wrap; /* wraps on small screens */
 }
 
-/* Icon styling */
+/* Each link icon + label is a vertical stack and centered */
+.icons-row a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* optional: remove underline */
+}
+
+/* Icons themselves */
 .social-icon {
   width: 48px;
   height: 48px;
@@ -4008,7 +4004,7 @@ input, select, textarea {
   border: none;
 }
 
-/* Label under icons */
+/* Labels under icons */
 .icon-label {
   display: block;
   margin-top: 0.4em;
@@ -4024,12 +4020,6 @@ input, select, textarea {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
-
-/* Card container */
-.contact-card {
-  padding: 1.8em;
-}
-
 
 
 /* Grid container for profiles */
@@ -4069,6 +4059,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
