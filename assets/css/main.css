@@ -3990,6 +3990,16 @@ input, select, textarea {
   text-align: center;
 }
 
+/* Responsive: stack columns on mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 1.5em;
+    padding: 2em 1em;
+  }
+}
+
+
 /* Card container */
 .contact-card {
   padding: 1.8em;
@@ -4084,6 +4094,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
