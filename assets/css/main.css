@@ -3969,36 +3969,41 @@ input, select, textarea {
   }
 }
 
-/* Full-width white + purple banner sections */
-#contact .wrapper {
+/* Full-width section */
+.contact-row {
   width: 100%;
-  max-width: none;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.contact-column {
-  width: 100%;
-  max-width: 600px;  /* optional: controls max width */
+  max-width: 900px;   /* controls overall width */
   margin: 0 auto;
   padding: 3em 1em;
   text-align: center;
 }
 
-
-/* Card containers */
+/* Card container */
 .contact-card {
   padding: 1.8em;
 }
 
-/* Icon row spacing */ 
-.icons-row {
-	display: flex; 
-	justify-content: center; 
-	gap: 1.5em; 
-	margin-top: 1em; 
+/* Horizontal row of icons */
+.icon-row {
+  display: flex;
+  justify-content: center;   /* centers row horizontally */
+  gap: 3em;                  /* space between icons */
+  margin-top: 1.5em;
+  flex-wrap: wrap;            /* wrap on smaller screens */
 }
 
+/* Icons themselves */
+.social-icon {
+  width: 48px;
+  height: 48px;
+  filter: brightness(0) invert(1); /* white icons */
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
+}
+
+/* Label under icons */
 .icon-label {
   display: block;
   margin-top: 0.4em;
@@ -4006,25 +4011,14 @@ input, select, textarea {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
-
-.social-icon {
-  width: 48px;
-  height: 48px;
-  filter: brightness(0) invert(1); /* makes the SVG white on dark background */
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  border: none;
+/* Hover effect */
+.icon-row a:hover .social-icon {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
 }
-
-
-/* White icons on purple */
-.wrapper.style3 .social-icon {
-  filter: invert(100%);
-}
-
 
 /* Grid container for profiles */
 .profiles-grid {
@@ -4063,6 +4057,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
