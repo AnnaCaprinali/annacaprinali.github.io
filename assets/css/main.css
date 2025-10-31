@@ -3970,28 +3970,52 @@ input, select, textarea {
 }
 
 /* Full contact section */
+/* Full-width wrapper sections */
+.wrapper.full-width {
+  width: 100%;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
 
-/* Center the heading of the card */
+/* Top row: 2-column layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  max-width: 1200px; /* optional for very wide screens */
+  margin: 0 auto;
+  padding: 3em 2em;
+  text-align: center;
+}
+
+/* Card container */
+.contact-card {
+  padding: 1.8em;
+}
+
+/* Top row headings centered */
 .contact-card h3 {
   text-align: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
-/* Horizontal row of icons, but each icon+label centered */
+/* Bottom row: horizontal icon layout */
 .icons-row {
   display: flex;
-  justify-content: center; /* centers the whole row */
-  gap: 2.5em;
-  margin-top: 1.5em;
+  justify-content: center; /* center row */
+  gap: 3em;
   flex-wrap: wrap; /* wraps on small screens */
+  margin-top: 1.5em;
 }
 
-/* Each link icon + label is a vertical stack and centered */
+/* Each icon + label stacked and centered */
 .icons-row a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none; /* optional: remove underline */
+  text-decoration: none;
 }
 
 /* Icons themselves */
@@ -4020,6 +4044,7 @@ input, select, textarea {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
+
 
 
 /* Grid container for profiles */
@@ -4059,6 +4084,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
