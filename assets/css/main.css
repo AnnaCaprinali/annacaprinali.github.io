@@ -3969,37 +3969,42 @@ input, select, textarea {
   }
 }
 
-
-/* Contacts */
+/* Grid layout */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
-.project-card {
-  background: inherit; /* inherits style3 or style5 background */
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.social-icons-grid {
+/* Card containers */
+.contact-card {
+  padding: 1.5em;
+}
+
+/* Icon row */
+.icons-row {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 1.2em;
+  margin-top: 0.8em;
 }
 
-.icon-link img {
+/* Proper icon styling */
+.social-icon {
   width: 40px;
   height: 40px;
-  transition: transform 0.2s ease;
+  padding: 8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #fff;
 }
 
-.icon-link img:hover {
-  transform: scale(1.1);
+/* Make icons invert to white on dark background */
+.wrapper.style3 .social-icon {
+  filter: invert(100%);
 }
 
 /* Grid container for profiles */
@@ -4039,6 +4044,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
