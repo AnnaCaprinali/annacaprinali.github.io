@@ -3971,28 +3971,25 @@ input, select, textarea {
 
 /* Full contact section */
 
+/* Make wrapper full-width */
+.wrapper.full-width {
+  width: 100%;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+/* Top row: 2-column grid */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
   padding: 3em 2em;
-}
-
-.contact-card {
-  padding: 1.8em;
-}
-
-.contact-row {
-  width: 100%;
-  max-width: 900px;   /* controls overall width */
-  margin: 0 auto;
-  padding: 3em 1em;
   text-align: center;
 }
 
+/* Bottom row: horizontal icon layout */
 .icons-row {
   display: flex;
   justify-content: center;
@@ -4001,6 +3998,7 @@ input, select, textarea {
   flex-wrap: wrap; /* wraps on small screens */
 }
 
+/* Icon styling */
 .social-icon {
   width: 48px;
   height: 48px;
@@ -4010,6 +4008,7 @@ input, select, textarea {
   border: none;
 }
 
+/* Label under icons */
 .icon-label {
   display: block;
   margin-top: 0.4em;
@@ -4020,10 +4019,17 @@ input, select, textarea {
   text-align: center;
 }
 
+/* Hover effect */
 .icons-row a:hover .social-icon {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
+
+/* Card container */
+.contact-card {
+  padding: 1.8em;
+}
+
 
 
 /* Grid container for profiles */
@@ -4063,6 +4069,7 @@ input, select, textarea {
 .profile-link:hover {
   background-color: #005fa3;
 }
+
 
 
 
