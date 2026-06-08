@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Anna Caprinali - Early Career Researcher</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Researching gender, sexual orientation, and education inequalities.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #1b1f22;
+            --text: #c8cdd1;
+            --text-heading: #ffffff;
+            --muted: #8a9099;
+            --accent: #9aafc7;
+            --accent-bright: #6fa3d0;
+            --border: #2e3438;
+            --section-bg: #212629;
+            --section-alt-bg: #1e2226;
+            --banner-bg: #1b1f22;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+            font-size: 1rem;
+        }
+
+        /* ── Header / Nav ── */
+        header {
+            background: rgba(0,0,0,0.25);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        header a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+        }
+
+        header .site-title {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: #fff; }
+
+        /* ── Banner ── */
+        .banner {
+            background: var(--banner-bg);
+            color: #fff;
+            text-align: center;
+            padding: 5rem 2rem 4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .banner h1 {
+            font-size: 2.6rem;
+            font-weight: 300;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+            color: #fff;
+        }
+
+        .banner .pronouns {
+            font-size: 0.8rem;
+            opacity: 0.55;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .banner img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.15);
+            display: block;
+            margin: 0 auto 1.5rem;
+        }
+
+        .banner .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.65;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* ── Sections ── */
+        .section {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:nth-child(odd) { background: var(--section-bg); }
+        .section:nth-child(even) { background: var(--section-alt-bg); }
+        .section:last-of-type { border-bottom: none; }
+
+        .section h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+        }
+
+        .section p {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section p:last-child { margin-bottom: 0; }
+
+        .section strong { color: var(--text-heading); font-weight: 600; }
+
+        /* ── Footer ── */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-icons a {
+            color: #ccc;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-icons a:hover { color: #fff; }
+        .footer-icons svg { fill: currentColor; }
+
+        footer a.email-link {
+            color: #ccc;
+            text-decoration: underline;
+        }
+
+        footer a.email-link:hover { color: #fff; }
+
+        .footer-copy {
+            margin-top: 0.75rem;
+            opacity: 0.45;
+            font-size: 0.75rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .banner h1 { font-size: 1.8rem; }
+            header { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="site-title">Anna Caprinali</a>
+        <nav>
+            <ul>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="divulgative.html">Divulgative Projects</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Anna Caprinali</h1>
+        <p class="pronouns">She/Her · No pronouns</p>
+        <img src="images/profile.png" alt="Portrait of Anna Caprinali" />
+        <p class="subtitle">Early Career Researcher</p>
+    </div>
+
+    <!-- Current position -->
+    <section class="section">
+        <h2>Current Position</h2>
+        <p><strong>PhD defended:</strong> 16th of March 2026</p>
+        <p><strong>Supervisor:</strong> Prof. Agnese Vitali</p>
+        <p><strong>Thesis:</strong> Diverging trajectories? Educational stratification and life opportunities of LGB adolescents.</p>
+    </section>
+
+    <!-- Research interests -->
+    <section class="section">
+        <h2>Research Interests</h2>
+        <p>My research work entails social stratification and demography, using an interdisciplinary approach to investigate potential inequalities resulting from the interaction of gender and sexual orientation in various aspects of life.</p>
+        <p>Recently, my research has focused on the life trajectories of non-heterosexual individuals and how sexual orientation influences aspects such as partnership transitions and educational careers.</p>
+        <p>My PhD project explores the extent to which sexual orientation is related to and affects educational attainment, and how it contributes to shape adult opportunities for LGB(TQIA*) pupils.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-icons">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/anna-caprinali" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="22" height="22">
+                    <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340c-29.4 0-53.28-23.88-53.28-53.28S24.44 1.44 53.84 1.44s53.28 23.88 53.28 53.28-23.88 53.28-53.28 53.28zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.24-79.2-48.28 0-55.6 37.7-55.6 76.7V448h-92.8V148.9h89.2v40.8h1.3c12.4-23.4 42.6-48.2 87.7-48.2 93.8 0 111.1 61.7 111.1 141.9V448z"/>
+                </svg>
+            </a>
+        </div>
+        <p>Email: <a href="mailto:anna.caprinali@unitn.it" class="email-link">anna.caprinali@unitn.it</a></p>
+        <p class="footer-copy">2026 · Anna Caprinali</p>
+    </footer>
+
+</body>
+</html>
