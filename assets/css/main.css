@@ -3314,8 +3314,9 @@ body.is-menu-visible #page-wrapper {
   opacity: 0.35;
 }
 
+
 /* =========================
-   HEADER
+   HEADER BAR
 ========================= */
 
 #header {
@@ -3329,29 +3330,44 @@ body.is-menu-visible #page-wrapper {
 
   display: flex;
   align-items: center;
-
   padding: 0 1.25em;
   box-sizing: border-box;
 }
 
-/* NAV CONTAINER */
+/* =========================
+   NAV CONTAINER
+========================= */
+
 #header nav {
   width: 100%;
 }
 
-/* NAV LIST */
-#header nav ul {
-  list-style: none;
+/* =========================
+   NAV LIST (CRITICAL FIX)
+========================= */
 
+#header nav ul {
   display: flex;
   align-items: center;
 
   width: 100%;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-/* NAV LINKS */
+/* =========================
+   BURGER POSITION (RIGHT SIDE)
+========================= */
+
+#header nav ul li.special {
+  margin-left: auto; /* THIS pushes burger to the right */
+}
+
+/* =========================
+   MENU LINK STYLE
+========================= */
+
 #header nav ul li a {
   display: block;
   color: #fff;
@@ -3361,18 +3377,6 @@ body.is-menu-visible #page-wrapper {
   padding: 0 1em;
   text-decoration: none;
 }
-
-/* =========================
-   BURGER POSITION (RIGHT SIDE)
-========================= */
-
-#header nav ul li.special {
-  margin-left: auto; /* pushes burger to right */
-}
-
-/* =========================
-   OFF-CANVAS MENU
-========================= */
 
 #menu {
   position: fixed;
@@ -3395,82 +3399,8 @@ body.is-menu-visible #page-wrapper {
   transition: transform 0.5s ease;
 }
 
-/* OPEN STATE */
 body.is-menu-visible #menu {
   transform: translateX(0);
-}
-
-/* MENU LIST */
-#menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#menu ul > li {
-  border-top: solid 1px rgba(0, 0, 0, 0.125);
-  margin-top: 0.5em;
-  padding-top: 0.5em;
-}
-
-#menu ul > li:first-child {
-  border-top: none;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-#menu ul > li > a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 0.8em;
-  letter-spacing: 0.225em;
-  text-transform: uppercase;
-  display: block;
-}
-
-/* =========================
-   CLOSE BUTTON
-========================= */
-
-#menu .close {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 7em;
-  height: 3em;
-
-  background-image: url("images/close.svg");
-  background-repeat: no-repeat;
-  background-position: 4.85em 1em;
-
-  cursor: pointer;
-  border: 0;
-}
-
-/* =========================
-   MOBILE ADJUSTMENTS
-========================= */
-
-@media screen and (max-width: 736px) {
-
-  #menu {
-    padding: 3em 1.5em;
-  }
-
-  #header nav ul li a {
-    padding: 0 0.75em;
-  }
-}
-
-/* Profile image on the right (in header) */
-#header .header-profile-image {
-  width: 85px;
-  height: 85px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  margin-left: 1em;
 }
 
 /* ✅ Banner content centered again */
