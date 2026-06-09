@@ -3399,6 +3399,12 @@ body.is-menu-visible #page-wrapper {
   transition: transform 0.5s ease;
 }
 
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body.is-menu-visible #menu {
   transform: translateX(0);
 }
@@ -3434,14 +3440,9 @@ body.is-menu-visible #menu {
     font-size: 0.8em;
   }
 
-  #header nav ul li a {
-    padding-left: 0.8em;
-  }
+#header nav ul li.special {
+  margin-left: auto !important;
 }
-
-Option B — Move button to the right (match menu)
-
-Add:
 
 #nav ul {
   display: flex;
