@@ -3485,6 +3485,15 @@ input, select, textarea {
   }
 }
 
+Option B — Move button to the right (match menu)
+
+Add:
+
+#nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 736px) {
