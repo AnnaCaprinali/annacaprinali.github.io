@@ -3978,6 +3978,26 @@ Add:
   }
 }
 
+.two-column-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    padding: 2rem;
+}
+
+/* Each wrapper becomes a column */
+.two-column-layout .column {
+    flex: 1;
+    margin: 0;
+}
+
+/* Make it responsive */
+@media (max-width: 900px) {
+    .two-column-layout {
+        flex-direction: column;
+    }
+}
+
 /* Full contact section */
 /* Full-width wrapper sections */
 .wrapper.full-width {
