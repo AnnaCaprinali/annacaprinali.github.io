@@ -3300,73 +3300,135 @@ input, select, textarea {
 
 		}
 
-/* =========================
-   PAGE WRAPPER
-========================= */
+/* Page Wrapper + Menu */
 
-#page-wrapper {
-  transition: opacity 0.5s ease;
-  opacity: 1;
-  padding-top: 5.5em;
-}
+	#page-wrapper {
+		-moz-transition: opacity 0.5s ease;
+		-webkit-transition: opacity 0.5s ease;
+		-ms-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+		opacity: 1;
+		padding-top: 3em;
+	}
 
-body.is-menu-visible #page-wrapper {
-  opacity: 0.35;
-}
+		#page-wrapper:before {
+			background: rgba(0, 0, 0, 0);
+			content: '';
+			display: block;
+			display: none;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 10001;
+		}
 
+	#menu {
+		-moz-transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		-ms-transform: translateX(100%);
+		transform: translateX(100%);
+		-moz-transition: -moz-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		-webkit-overflow-scrolling: touch;
+		background: #e06d3c; /* softer reddish-orange */
+		color: #ffffff;
+		height: 100%;
+		max-width: 80%;
+		overflow-y: auto;
+		padding: 3em 2em;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 20em;
+		z-index: 10002;
+	}
 
-/* =========================
-   HEADER BAR
-========================= */
+		#menu ul {
+			list-style: none;
+			padding: 0;
+		}
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5.5em;
-  background: #2e3842;
-  z-index: 10000;
+			#menu ul > li {
+				border-top: solid 1px rgba(0, 0, 0, 0.125);
+				margin: 0.5em 0 0 0;
+				padding: 0.5em 0 0 0;
+			}
 
-  display: flex;
-  align-items: center;
-  padding: 0 1.25em;
-  box-sizing: border-box;
-}
+				#menu ul > li:first-child {
+					border-top: 0 !important;
+					margin-top: 0 !important;
+					padding-top: 0 !important;
+				}
 
-/* =========================
-   NAV CONTAINER
-========================= */
+				#menu ul > li > a {
+					border: 0;
+					color: inherit;
+					display: block;
+					font-size: 0.8em;
+					letter-spacing: 0.225em;
+					outline: 0;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
 
-#header nav {
-  width: 100%;
-}
+					@media screen and (max-width: 736px) {
 
-/* =========================
-   NAV LIST (CRITICAL FIX)
-========================= */
+						#menu ul > li > a {
+							line-height: 3em;
+						}
 
+					}
+
+		#menu .close {
+			background-image: url("images/close.svg");
+			background-position: 4.85em 1em;
+			background-repeat: no-repeat;
+			border: 0;
+			cursor: pointer;
+			display: block;
+			height: 3em;
+			position: absolute;
+			right: 0;
+			top: 0;
+			vertical-align: middle;
+			width: 7em;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#menu {
+				padding: 3em 1.5em;
+			}
+
+		}
+
+	body.is-menu-visible #page-wrapper {
+		opacity: 0.35;
+	}
+
+		body.is-menu-visible #page-wrapper:before {
+			display: block;
+		}
+
+	body.is-menu-visible #menu {
+		-moz-transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+	}
+/* Header */ #header { position: fixed; top: 0; left: 0; width: 100%; height: 5.5em; background: #2e3842; z-index: 10000; display: flex; align-items: center; justify-content: space-between; padding: 0 1.25em; box-sizing: border-box; transition: background-color 0.2s ease; } /* Site title and subtitle */ #header .title-container { display: flex; flex-direction: column; } #header h1 { margin: 0; } #header .subtitle { font-size: 0.65em; font-weight: 300; letter-spacing: 0.2em; color: #d4d4d4; text-transform: uppercase; margin-top: 0.1em; }
+
+/* Navigation */
 #header nav ul {
-  display: flex !important;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-
-/* =========================
-   BURGER POSITION (RIGHT SIDE)
-========================= */
-
-#header nav ul li.special {
-  position: static !important;
-  float: none !important;
-  left: auto !important;
-  right: auto !important;
-}
-
-/* =========================
-   MENU LINK STYLE
-========================= */
 
 #header nav ul li a {
   display: block;
@@ -3375,38 +3437,16 @@ body.is-menu-visible #page-wrapper {
   letter-spacing: 0.225em;
   text-transform: uppercase;
   padding: 0 1em;
-  text-decoration: none;
 }
 
-#menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-
-  width: 20em;
-  max-width: 80%;
-  height: 100%;
-
-  background: #e06d3c;
-  color: #ffffff;
-
-  padding: 3em 2em;
-  overflow-y: auto;
-
-  z-index: 10002;
-
-  transform: translateX(100%);
-  transition: transform 0.5s ease;
-}
-
-#menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-body.is-menu-visible #menu {
-  transform: translateX(0);
+/* Profile image on the right (in header) */
+#header .header-profile-image {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: 1em;
 }
 
 /* ✅ Banner content centered again */
@@ -3440,9 +3480,14 @@ body.is-menu-visible #menu {
     font-size: 0.8em;
   }
 
-#header nav ul li.special {
-  margin-left: auto !important;
+  #header nav ul li a {
+    padding-left: 0.8em;
+  }
 }
+
+Option B — Move button to the right (match menu)
+
+Add:
 
 #nav ul {
   display: flex;
@@ -4058,17 +4103,6 @@ body.is-menu-visible #menu {
 .profile-link:hover {
   background-color: #005fa3;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
