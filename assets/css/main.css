@@ -3983,21 +3983,29 @@ Add:
     gap: 2rem;
     align-items: stretch;
     padding: 2rem;
+
+    /* CRITICAL FIXES */
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-/* Each wrapper becomes a column */
 .two-column-layout .column {
-    flex: 1;
-    margin: 0;
+    flex: 1 1 0;
+    min-width: 0; /* IMPORTANT: prevents overflow */
 }
 
-/* Make it responsive */
+/* Prevent content from forcing width */
+.two-column-layout .column .inner {
+    max-width: 100%;
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .two-column-layout {
         flex-direction: column;
     }
 }
-
 /* Full contact section */
 /* Full-width wrapper sections */
 .wrapper.full-width {
