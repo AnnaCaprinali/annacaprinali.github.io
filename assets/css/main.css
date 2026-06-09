@@ -3347,13 +3347,10 @@ body.is-menu-visible #page-wrapper {
 ========================= */
 
 #header nav ul {
-  display: flex;
+  display: flex !important;
+  flex-direction: row;
   align-items: center;
-
   width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 /* =========================
@@ -3361,7 +3358,10 @@ body.is-menu-visible #page-wrapper {
 ========================= */
 
 #header nav ul li.special {
-  margin-left: auto; /* THIS pushes burger to the right */
+  position: static !important;
+  float: none !important;
+  left: auto !important;
+  right: auto !important;
 }
 
 /* =========================
