@@ -4028,16 +4028,6 @@ Add:
 
 .contact-grid .wrapper {
     margin: 0;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-}
-
-.contact-grid .wrapper {
     padding: 3em 2em;
 }
 
