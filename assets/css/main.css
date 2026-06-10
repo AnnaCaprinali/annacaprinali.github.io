@@ -3121,6 +3121,10 @@ input, select, textarea {
 
 			}
 
+.wrapper header.major h3 {
+    color: #ffffff;
+}
+
 		.wrapper.style4 {
 			background-color: transparent;
 		}
