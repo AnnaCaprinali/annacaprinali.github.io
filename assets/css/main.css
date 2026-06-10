@@ -4030,14 +4030,23 @@ Add:
     margin: 0;
 }
 
-/* Responsive: stack columns on mobile */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr; /* single column */
-    gap: 1.5em;
-    padding: 2em 1em;
-  }
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
 }
+
+.contact-grid .wrapper {
+    padding: 3em 2em;
+}
+
+@media screen and (max-width: 736px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 /* Card container */
