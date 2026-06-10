@@ -4029,6 +4029,11 @@ Add:
 .contact-grid .wrapper {
     margin: 0;
     padding: 3em 2em;
+	min-width: 0;
+}
+
+.contact-grid .inner {
+    max-width: 100%;
 }
 
 @media screen and (max-width: 736px) {
