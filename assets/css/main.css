@@ -4018,13 +4018,16 @@ Add:
 
 /* Top row: 2-column layout */
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em;
-  max-width: 1200px; /* optional for very wide screens */
-  margin: 0 auto;
-  padding: 3em 2em;
-  text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.contact-grid .wrapper {
+    margin: 0;
 }
 
 /* Responsive: stack columns on mobile */
