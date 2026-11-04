@@ -1,86 +1,101 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Anna Caprinali — Social Demography</title>
 
-    <meta
-        name="description"
-        content="Anna Caprinali, Post-Doctoral Researcher in Social Demography. Research on LGBTQ+ inequalities, education, partnerships, and social isolation."
-    >
+    <meta name="description"
+          content="Anna Caprinali, Early Career Researcher in Social Demography. Research on LGBTQ+ inequalities, education, partnerships, and social isolation.">
 
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        href="images/github-mark.svg"
-    >
+    <link rel="icon" type="image/svg+xml"
+          href="images/github-mark.svg">
 
-    <link rel="stylesheet" href="assets\css\main.css">
+    <!-- Existing stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- New homepage design -->
+    <link rel="stylesheet" href="assets/css/homepage.css">
 </head>
 
-<body>
-    <div class="page">
+<body class="homepage">
 
-        <nav aria-label="Main navigation">
-            <a class="nav-brand" href="#top">
-                Homepage
+    <div class="home-page">
+
+        <!-- Navigation -->
+        <header class="home-header">
+            <a class="home-brand" href="index.html">
+                Anna Caprinali
             </a>
 
-            <div class="nav-links">
+            <nav class="home-nav" aria-label="Main navigation">
                 <a href="research.html">Research</a>
                 <a href="cv.html">CV</a>
+                <a href="divulgative.html">Projects</a>
                 <a href="#contact">Contact</a>
-            </div>
-        </nav>
+            </nav>
+        </header>
 
-        <main id="top">
 
-            <section class="hero">
-                <div>
-                    <p class="eyebrow">
-                       Post-Doctoral Researcher · University of Padua
+        <main>
+
+            <!-- Introduction -->
+            <section class="home-hero" id="top">
+
+                <div class="hero-text">
+
+                    <p class="home-eyebrow">
+                        Social Demography · University of Padua
                     </p>
 
                     <h1>
-                        Anna<br>Caprinali<span class="title-dot">.</span>
+                        Anna<br>
+                        Caprinali<span class="title-dot">.</span>
                     </h1>
 
-                    <p class="subtitle">
+                    <p class="hero-subtitle">
                         Early Career Researcher<br>
                         Department of Statistical Sciences
                     </p>
 
-                    <p class="intro">
+                    <p class="hero-intro">
                         I study social inequalities across the life course,
                         focusing on sexual orientation, education,
                         partnerships, and family trajectories. My current
                         research also explores living arrangements,
                         loneliness, and social isolation.
                     </p>
+
                 </div>
 
-                <div>
-                    <div class="portrait-wrap">
+                <div class="hero-portrait">
+
+                    <div class="portrait-frame">
                         <img
                             src="images/profile.png"
                             alt="Portrait of Anna Caprinali"
-                            class="portrait"
-                        >
+                            class="profile-image">
                     </div>
 
                     <p class="portrait-caption">
                         Research · Inequality · Life course
                     </p>
+
                 </div>
+
             </section>
 
-            <section class="section" id="position">
+
+            <!-- Current position -->
+            <section class="home-section" id="position">
+
                 <p class="section-label">01 / Now</p>
 
                 <div class="section-content">
+
                     <h2>What I'm working on</h2>
 
                     <p>
@@ -92,18 +107,24 @@
                     <p>
                         My current project examines
                         <span class="project-title">
-                            Trajectories of Isolation:
-                            Living Alone, Loneliness, Social Isolation,
-                            and Health Across the Life Course.
+                            Trajectories of Isolation: Living Alone,
+                            Loneliness, Social Isolation, and Health
+                            Across the Life Course.
                         </span>
                     </p>
+
                 </div>
+
             </section>
 
-            <section class="section" id="research">
+
+            <!-- Research interests -->
+            <section class="home-section" id="research">
+
                 <p class="section-label">02 / Research</p>
 
                 <div class="section-content">
+
                     <h2>Social inequalities, in different forms</h2>
 
                     <p>
@@ -120,27 +141,44 @@
                         family trajectories.
                     </p>
 
-                    <a class="research-link" href="research.html">
+                    <a class="home-text-link" href="research.html">
                         Explore my research →
                     </a>
+
                 </div>
+
             </section>
 
         </main>
 
-        <footer id="contact">
-            <p>
+
+        <!-- Footer -->
+        <footer class="home-footer" id="contact">
+
+            <div class="footer-email">
                 <a href="mailto:anna.caprinali@unipd.it">
                     anna.caprinali@unipd.it
                 </a>
-            </p>
+            </div>
 
             <div class="footer-links">
                 <a href="cv.html">CV</a>
                 <a href="research.html">Publications</a>
-                <p>© 2026 Anna Caprinali</p>
+                <a href="divulgative.html">Projects</a>
+                <a href="contact.html">Contacts</a>
             </div>
+
+            <p class="footer-copy">
+                © 2026 Anna Caprinali
+            </p>
+
         </footer>
+
+    </div>
+
+</body>
+</html>
+
 
     </div>
 </body>
